@@ -1529,7 +1529,7 @@ CREATE TABLE `sys_config`  (
 -- ----------------------------
 INSERT INTO `sys_config` VALUES ('1481959780167823362', '_address', '', 1, NULL);
 INSERT INTO `sys_config` VALUES ('1481959780360761346', 'brandName', 'Teaching', 1, NULL);
-INSERT INTO `sys_config` VALUES ('1481959780637585409', 'footer', '<p>Copyright &copy; 2020&nbsp;<a href=\"https://teaching.vip\" target=\"_blank\" rel=\"noopener\">Teaching</a> | Teaching开源Steam教学平台 <a href=\"https://github.com/open-scratch/teaching\" target=\"_blank\" rel=\"noopener\">Github</a></p>\n<p><a href=\"http://beian.miit.gov.cn/\" target=\"_blank\" rel=\"noopener\">沪ICP备20009532号-4</a></p>', 1, NULL);
+INSERT INTO `sys_config` VALUES ('1481959780637585409', 'footer', '<p>Copyright &copy; 2020&nbsp;<a href=\"https://teach.qiaos.fun\" target=\"_blank\" rel=\"noopener\">Teaching</a> | Teaching开源Steam教学平台 <a href=\"https://github.com/open-scratch/teaching\" target=\"_blank\" rel=\"noopener\">Github</a></p>\n<p><a href=\"http://beian.miit.gov.cn/\" target=\"_blank\" rel=\"noopener\">沪ICP备20009532号-4</a></p>', 1, NULL);
 INSERT INTO `sys_config` VALUES ('1481959780801163266', '_phone', '', 1, NULL);
 INSERT INTO `sys_config` VALUES ('1481959781103153153', '_defaultRole', '1252532277234982913', 1, NULL);
 INSERT INTO `sys_config` VALUES ('1481959781228982274', 'logo', 'fd34a6de38af4d19a370e56c019d5280.png', 1, NULL);
@@ -1538,7 +1538,7 @@ INSERT INTO `sys_config` VALUES ('1481959782298529794', '_linkman', '', 1, NULL)
 INSERT INTO `sys_config` VALUES ('1514923379054829570', '_defaultDepart', '4338928a0bbc4bb89fce1523142083a6', 1, NULL);
 INSERT INTO `sys_config` VALUES ('1515593345009672194', 'brandDesc', '开源STEAM教学平台', 1, NULL);
 INSERT INTO `sys_config` VALUES ('1612381213129633793', 'banner', 'c692359341d94ccab47dd268f99bee85.jpg,290fdda5854e46779f55c9b7b0d47f06.jpg', 1, NULL);
-INSERT INTO `sys_config` VALUES ('1612381213259657218', 'bannerLinks', 'https://teaching.vip', 1, NULL);
+INSERT INTO `sys_config` VALUES ('1612381213259657218', 'bannerLinks', 'https://teach.qiaos.fun', 1, NULL);
 INSERT INTO `sys_config` VALUES ('1624626469954789378', '_indexHtml', '<p><em><strong><img src=\"https://teaching.vip/wp-content/uploads/2020/04/teaching-logo-l-1.png\" alt=\"\" width=\"512\" height=\"128\" /></strong></em></p>\n<h1><em><strong>欢迎使用Teaching教学平台</strong></em></h1>', 1, NULL);
 
 -- ----------------------------
