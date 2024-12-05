@@ -44,7 +44,27 @@ public class NgAlainServiceImpl implements NgAlainService {
 
     @Override
     public List<Map<String, String>> getDictByTable(String table, String key, String value) {
-        return this.mapper.getDictByTable(table,key,value);
+        // 安全检查
+        if (!NgAlainDictConfig.isTableAllowed(table)) {
+            throw new RuntimeException("不允许访问该表");
+        }
+        if (!NgAlainDictConfig.isFieldAllowed(key) || !NgAlainDictConfig.isFieldAllowed(value)) {
+            throw new RuntimeException("不允许访问该字段");
+        }
+        
+        // 参数验证
+        if (table == null || table.trim().isEmpty() ||
+            key == null || key.trim().isEmpty() ||
+            value == null || value.trim().isEmpty()) {
+            throw new RuntimeException("参数不能为空");
+        }
+        
+        // SQL注入防护 - 移除任何可能的SQL注入字符
+        table = table.replaceAll("[^a-zA-Z0-9_]", "");
+        key = key.replaceAll("[^a-zA-Z0-9_]", "");
+        value = value.replaceAll("[^a-zA-Z0-9_]", "");
+        
+        return this.mapper.getDictByTable(table, key, value);
     }
 
     private JSONArray parseNgAlain(JSONArray jsonArray) {

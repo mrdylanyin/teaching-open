@@ -80,7 +80,31 @@ public class NgAlainController {
         return dictlist;
     }
     @RequestMapping(value = "/getDictItemsByTable/{table}/{key}/{value}", method = RequestMethod.GET)
-    public Object getDictItemsByTable(@PathVariable String table,@PathVariable String key,@PathVariable String value) {
-        return this.ngAlainService.getDictByTable(table,key,value);
+    public Result<?> getDictItemsByTable(@PathVariable String table, @PathVariable String key, @PathVariable String value) {
+        Result<List<Map<String, String>>> result = new Result<>();
+        try {
+            // 基本参数验证
+            if (table == null || table.trim().isEmpty()) {
+                return Result.error("表名不能为空");
+            }
+            if (key == null || key.trim().isEmpty()) {
+                return Result.error("键名不能为空");
+            }
+            if (value == null || value.trim().isEmpty()) {
+                return Result.error("值名不能为空");
+            }
+            
+            // 调用service
+            List<Map<String, String>> data = this.ngAlainService.getDictByTable(table, key, value);
+            result.setSuccess(true);
+            result.setResult(data);
+            return result;
+        } catch (RuntimeException e) {
+            log.error("获取字典数据失败", e);
+            return Result.error(e.getMessage());
+        } catch (Exception e) {
+            log.error("获取字典数据失败", e);
+            return Result.error("系统错误，请联系管理员");
+        }
     }
 }
