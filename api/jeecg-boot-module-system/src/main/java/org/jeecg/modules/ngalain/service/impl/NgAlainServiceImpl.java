@@ -6,6 +6,7 @@ import org.jeecg.common.util.MD5Util;
 import org.jeecg.common.util.oConvertUtils;
 import org.jeecg.modules.ngalain.mapper.NgAlainMapper;
 import org.jeecg.modules.ngalain.service.NgAlainService;
+import org.jeecg.modules.ngalain.config.NgAlainDictConfig;
 import org.jeecg.modules.system.entity.SysPermission;
 import org.jeecg.modules.system.service.ISysPermissionService;
 import org.springframework.beans.factory.annotation.Autowired;
